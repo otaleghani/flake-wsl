@@ -101,7 +101,15 @@
       set -g status-right "#[bg=#{@thm_crust},fg=#{@thm_subtext_0}]#(echo '#{pane_current_path}' | sed 's#$HOME#~#; s#\\([^/]*/[^/]*/\\).*\\(/[^/]*/.*\\)$#\\1 ... \\2#; s#/#  #g') #[bg=#{@thm_crust},fg=#{@thm_crust}]#[bg=#{@thm_crust},fg=#{@thm_mauve}]#[bg=#{@thm_mauve},fg=#{@thm_crust}] %d-%m %H:%M " 
 
       set -g pane-base-index 1
-      set -g pane-border-format "#[?pane_active,#[bg=#{@thm_mauve},fg=#{@thm_crust}] #{pane_index}-#{pane_current_command} #[bg=#{@thm_mauve},fg=#{@thm_crust}]] "
+      set -g pane-border-format "#{?pane_active,
+        #[bg=#{@thm_pink} fg=#{@thm_crust}] #{pane_index}-#{pane_current_command} #[bg=#{@thm_crust} fg=#{@thm_pink}],
+         #{pane_index}-#{pane_current_command} }"
+      set -g pane-border-status "top"
+      set -g pane-border-style fg="#{@thm_mauve}"
+      set -g pane-active-border-style fg="#{@thm_pink}"
+      
+      # This is needed for exiting nvim insert mode instantly
+      set -s escape-time 0
     '';
   };
 }
