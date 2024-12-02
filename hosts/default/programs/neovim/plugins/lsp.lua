@@ -144,26 +144,26 @@ lsp_config.ts_ls.setup{
 }
 
 -- tailwind
-lsp_config.tailwindcss.setup{
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = { "tailwindcss-language-server", "--stdio" },
-  filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" },
-  root_dir = lsp_config.util.root_pattern("tailwind.config.js", "tailwind.config.cjs", "postcss.config.js", ".git"),
-  settings = {
-    tailwindCSS = {
-      lint = {
-        cssConflict = "warning",
-        invalidApply = "error",
-        invalidConfigPath = "error",
-        invalidScreen = "error",
-        invalidTailwindDirective = "error",
-        invalidVariant = "error",
-        recommendedVariantOrder = "warning",
-      },
-    }
-  }
-}
+-- lsp_config.tailwindcss.setup{
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   cmd = { "tailwindcss-language-server", "--stdio" },
+--   filetypes = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte" },
+--   root_dir = lsp_config.util.root_pattern("tailwind.config.js", "tailwind.config.cjs", "postcss.config.js", ".git"),
+--   settings = {
+--     tailwindCSS = {
+--       lint = {
+--         cssConflict = "warning",
+--         invalidApply = "error",
+--         invalidConfigPath = "error",
+--         invalidScreen = "error",
+--         invalidTailwindDirective = "error",
+--         invalidVariant = "error",
+--         recommendedVariantOrder = "warning",
+--       },
+--     }
+--   }
+-- }
 
 
 -- lua

@@ -5,5 +5,6 @@
     bun
     deno
     nodePackages.typescript-language-server
+    tailwindcss-language-server
   ];
 }

@@ -51,7 +51,7 @@
       eval "$(starship init zsh)"
       eval "$(ssh-agent -s)"
       ssh-add ~/.ssh/github
-      export PATH=$PATH:/home/nixos/dev-utils/
+      export PATH=$PATH:/home/nixos/dev-utils/development-environment
       clear
     '';
   };

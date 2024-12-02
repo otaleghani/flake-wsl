@@ -27,7 +27,7 @@ local plugins = {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
   },
-  
+
   -- START LSP
   {'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
   {'neovim/nvim-lspconfig'},
@@ -39,8 +39,13 @@ local plugins = {
   {'hrsh7th/cmp-nvim-lua'},
   {'rafamadriz/friendly-snippets'},
   {'L3MON4D3/LuaSnip'},
+  {
+    "luckasRanarison/tailwind-tools.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    opts = {}
+  },
   -- END LSP
-  
+
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   {
     "nvim-tree/nvim-tree.lua",
