@@ -38,18 +38,21 @@
     };
 
     initExtra = ''
-
       # bindkeyes
-      	# autosuggest
-      	bindkey "^f" autosuggest-accept 	# Accepts the current suggestion.
-      	bindkey "^e" autosuggest-execute 	# Accepts and executes the current suggestion.
-      	bindkey "^c" autosuggest-clear 		# Clears the current suggestion.
-      	bindkey "^w" autosuggest-fetch 		# Fetches a suggestion (works even when suggestions are disabled).
-      	# bindkey "^ " autosuggest-disable	# Disables suggestions.
-      	# bindkey "^ " autosuggest-enable 	# Re-enables suggestions.
-      	# bindkey "^ " autosuggest-toggle 	# Toggles between enabled/disabled suggestions.
-
-	eval "$(starship init zsh)"
+      # autosuggest
+      bindkey "^f" autosuggest-accept 	# Accepts the current suggestion.
+      bindkey "^e" autosuggest-execute 	# Accepts and executes the current suggestion.
+      bindkey "^c" autosuggest-clear 		# Clears the current suggestion.
+      bindkey "^w" autosuggest-fetch 		# Fetches a suggestion (works even when suggestions are disabled).
+      # bindkey "^ " autosuggest-disable	# Disables suggestions.
+      # bindkey "^ " autosuggest-enable 	# Re-enables suggestions.
+      # bindkey "^ " autosuggest-toggle 	# Toggles between enabled/disabled suggestions.
+      
+      eval "$(starship init zsh)"
+      eval "$(ssh-agent -s)"
+      ssh-add ~/.ssh/github
+      export PATH=$PATH:/home/nixos/dev-utils/
+      clear
     '';
   };
 }

@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     csharp-ls
-    dotnet-sdk_8
+    dotnet-sdk
   ];
 }

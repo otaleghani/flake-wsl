@@ -2,7 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     nix
-    nixfmt
+    # nixfmt
     nixpkgs-fmt
     nil                 # nix lsp
     nix-diff
