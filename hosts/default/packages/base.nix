@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+    helix
     neovim
     wget
     curl
@@ -13,5 +14,8 @@
     httpie            # HTTP client
     bat               # cat alternative
     eza               # ls alternative
+    awscli
+    openssl
+    pkg-config
   ];
 }

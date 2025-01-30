@@ -112,6 +112,22 @@ lsp_config.gopls.setup{
   }
 }
 
+-- python
+lsp_config.pylyzer.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "pylyzer", "--server" },
+  filetypes = { "python" },
+  single_file_support = true,
+  settings = {
+    python = {
+      diagnostics = true,
+      inlayHints = true,
+      smartCompletion = true,
+      checkOnType = false,
+    },
+  },
+}
 
 -- csharp
 lsp_config.csharp_ls.setup({

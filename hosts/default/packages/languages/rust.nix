@@ -14,5 +14,17 @@
     cargo-generate
     wasm-pack
     llvm
+
+    pkg-config
+    openssl
+    glib
+    cairo
+    pango
+    atk
+    gdk-pixbuf
+    libsoup
+    gtk3
+    libappindicator
+    webkitgtk
   ];
 }

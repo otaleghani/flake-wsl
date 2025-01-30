@@ -6,6 +6,7 @@
     ./programs/starship.nix
     ./programs/neovim.nix
     ./programs/tmux.nix
+    ./programs/helix.nix
   ];
 
   home.username = "nixos";
@@ -17,11 +18,10 @@
     cowsay
   ];
 
-  home.file = {
-  };
+  home.file = {};
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "hx";
   };
 
   programs.home-manager.enable = true;

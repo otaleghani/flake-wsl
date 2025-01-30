@@ -48,10 +48,11 @@
       # bindkey "^ " autosuggest-enable 	# Re-enables suggestions.
       # bindkey "^ " autosuggest-toggle 	# Toggles between enabled/disabled suggestions.
       
-      eval "$(starship init zsh)"
+      # eval "$(starship init zsh)"
       eval "$(ssh-agent -s)"
       ssh-add ~/.ssh/github
       export PATH=$PATH:/home/nixos/dev-utils/development-environment
+      export COLORTERM=truecolor
       clear
     '';
   };

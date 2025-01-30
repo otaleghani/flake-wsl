@@ -8,5 +8,6 @@
     pylint                        # linter
     black                         # formatter
     mypy                          # static type checker
+    pylyzer
   ];
 }
